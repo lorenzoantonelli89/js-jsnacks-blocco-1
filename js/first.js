@@ -52,16 +52,16 @@
 // Chiedere all'utente un valore limite, poi richiedere all'utente una serie di valori
 //  da sommare finchè la somma non supera il valore limite
 
-var valueLimit = parseInt(prompt('Scrivi un valore limite'));
-
-var sum = 0;
-while (sum != valueLimit) {
-  valueSum = parseInt(prompt('Scrivi dei valori per raggiungere la somma limite'));
-  sum += valueSum;
-
-}
-
-console.log(valueLimit, sum);
+// var valueLimit = parseInt(prompt('Scrivi un valore limite'));
+//
+// var sum = 0;
+// while (sum != valueLimit) {
+//   valueSum = parseInt(prompt('Scrivi dei valori per raggiungere la somma limite'));
+//   sum += valueSum;
+//
+// }
+//
+// console.log(valueLimit, sum);
 
 
 // Crea due tag div con due id diversi.
@@ -70,15 +70,15 @@ console.log(valueLimit, sum);
 // dispari e in verde i numeri pari.
 
 
-// var divRed = document.getElementById('red');
-// var divGreen = document.getElementById('green');
-// var numbers = [15, 20, 1, 3, 22];
-//
-//
-// for (var i = 0; i < numbers.length; i++) {
-//   if (numbers[i] %2 == 0) {
-//     divGreen.innerHTML += "<br>" + numbers[i] + "<br>";
-//   }else{
-//     divRed.innerHTML += "<br>" + numbers[i] + "<br>";
-//   }
-// }
+var divRed = document.getElementById('red');
+var divGreen = document.getElementById('green');
+var numbers = [15, 20, 1, 3, 22];
+
+
+for (var i = 0; i < numbers.length; i++) {
+  if (numbers[i] %2 == 0) {
+    divGreen.innerHTML += "<br>" + numbers[i] + "<br>";
+  }else{
+    divRed.innerHTML += "<br>" + numbers[i] + "<br>";
+  }
+}
