@@ -1,5 +1,5 @@
 
-function singleStudent() {
+function es1() {
     
     var student = {
         'name' : 'Lorenzo',
@@ -13,7 +13,7 @@ function singleStudent() {
 
 }
 
-function students() {
+function es2() {
     
     var students = [
         { 'name' : 'Lorenzo', 'surname' : 'Antonelli' },
@@ -31,7 +31,7 @@ function students() {
 
 }
 
-function student() {
+function es3() {
     var nameValue = prompt('scrivi un nome');
     var surnameValue = prompt('scrivi un cognome');
     var etaValue = parseInt(prompt("scrivi l'età"));
@@ -48,11 +48,29 @@ function student() {
 
 }
 
+function es3Var() {
+    var nameValue = prompt('scrivi un nome');
+    var surnameValue = prompt('scrivi un cognome');
+    var etaValue = parseInt(prompt("scrivi l'età"));
+
+    var student = {
+        'name' : nameValue,
+        'surname' : surnameValue,
+        'eta' : etaValue
+    }
+
+    console.log('Il nome è: ' + student['name']);
+    console.log('Il cognome è: ' + student['surname']);
+    console.log('La sua età è: ' + student['eta']);
+
+}
+
 
 function init() {
-    singleStudent();
-    students();
-    student();
+    es1();
+    es2();
+    es3();
+    es3Var();
 
 }
 
