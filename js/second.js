@@ -43,18 +43,29 @@ function es3() {
     var surnameValue = prompt('scrivi un cognome');
     var etaValue = parseInt(prompt("scrivi l'età"));
 
-    var student = {
-        'name': ['Lorenzo', 'Martino', 'Alessandro', 'Vladus', 'Gabriele', 'Tiziana', nameValue],
-        'surname': ['Antonelli', 'Scalvini', 'Venti', 'Matrioska', 'Alessi', 'Baldi', surnameValue],
-        'eta': [32, 25, 29, 28, 31, 25, etaValue]
-    }
+    var students = [
+        { 'name': 'Lorenzo', 'surname': 'Antonelli', 'eta': 32 },
+
+        { 'name': 'Martino', 'surname': 'Scalvini', 'eta': 25 },
+
+        { 'name': 'Alessandro', 'surname': 'Venti', 'eta': 29 },
+
+        {'name': nameValue, 'surname': surnameValue, 'eta': etaValue}
+    ]
 
     console.log(' ');
     console.log('ESERCIZIO 3');
-    console.log(student['name']);
-    console.log(student['surname']);
-    console.log(student['eta']);
 
+    for (var i = 0; i < students.length; i++) {
+
+        console.log(' ');
+        console.log('Name: ' + students[i]['name']);
+        console.log('Surname: ' + students[i]['surname']);
+        console.log('Età: ' + students[i]['eta']);
+
+    }
+
+    
 }
 
 function es3Var() {
