@@ -7,8 +7,11 @@ function es1() {
         'eta' : 32
     }
 
-    for(var key in student)
+    console.log('ESERCIZIO 1');
+    console.log(' ');
 
+    for(var key in student)
+    
     console.log(student[key]);
 
 }
@@ -23,8 +26,12 @@ function es2() {
         { 'name': 'Alessandro', 'surname': 'Venti' }
     ]
 
+    console.log(' ');
+    console.log('ESERCIZIO 2');
+
     for(var i = 0; i < students.length; i++){
 
+        console.log(' ');
         console.log('Name: ' + students[i]['name']);
         console.log('Surname: ' + students[i]['surname']);
     }
@@ -42,6 +49,8 @@ function es3() {
         'eta': [32, 25, 29, 28, 31, 25, etaValue]
     }
 
+    console.log(' ');
+    console.log('ESERCIZIO 3');
     console.log(student['name']);
     console.log(student['surname']);
     console.log(student['eta']);
@@ -59,6 +68,10 @@ function es3Var() {
         'eta' : etaValue
     }
 
+
+    console.log(' ');
+    console.log('ESERCIZIO 3 VAR');
+    console.log(' ');
     console.log('Il nome è: ' + student['name']);
     console.log('Il cognome è: ' + student['surname']);
     console.log('La sua età è: ' + student['eta']);
