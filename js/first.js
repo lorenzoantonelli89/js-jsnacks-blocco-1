@@ -70,15 +70,15 @@
 // dispari e in verde i numeri pari.
 
 
-var divRed = document.getElementById('red');
-var divGreen = document.getElementById('green');
-var numbers = [15, 20, 1, 3, 22];
+// var divRed = document.getElementById('red');
+// var divGreen = document.getElementById('green');
+// var numbers = [15, 20, 1, 3, 22];
 
 
-for (var i = 0; i < numbers.length; i++) {
-  if (numbers[i] %2 == 0) {
-    divGreen.innerHTML += "<br>" + numbers[i] + "<br>";
-  }else{
-    divRed.innerHTML += "<br>" + numbers[i] + "<br>";
-  }
-}
+// for (var i = 0; i < numbers.length; i++) {
+//   if (numbers[i] %2 == 0) {
+//     divGreen.innerHTML += "<br>" + numbers[i] + "<br>";
+//   }else{
+//     divRed.innerHTML += "<br>" + numbers[i] + "<br>";
+//   }
+// }
