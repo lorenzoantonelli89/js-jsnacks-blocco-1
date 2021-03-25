@@ -53,6 +53,7 @@ th, td{
   border-style: groove;
   padding: 10px;
   text-align: center;
+  width: calc(100% / 4);
 }
 
 .fas.fa-times{

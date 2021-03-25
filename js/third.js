@@ -12,18 +12,39 @@ function es1() {
 
     students.push(student);
 
-    tableWrapper.innerHTML = ("<table id='table'><tr><th>Nome</th><th>Cognome</th><th>Età</th><th></th></tr></table> ");
+    tableWrapper.innerHTML = ("<table id='table'><tr><th>Nome</th><th>Cognome</th><th>Età</th><th>REMOVE</th></tr></table> ");
 
     table = document.getElementById('table');
 
     for(var i = 0; i < students.length; i++){
 
-        table.innerHTML += ('<tr><td>' + students[i]['name'] + '</td><td>' + students[i]['surname'] + '</td><td>' + students[i]['age'] + '</td><td><i class="fas fa-times"></i></td></tr>');
+        printTr(students[i]);
+
     }
 }
 
 function printTr(obj) {
-    table.innerHTML += ('<tr><td>' + obj['name'] + '</td><td>' + obj['surname'] + '</td><td>' + obj['age'] + '</td><td><i class="fas fa-times"></i></td></tr>');
+    
+    var tr = document.createElement('tr');
+    var tdName = document.createElement('td');
+    var tdSurname = document.createElement('td');
+    var tdAge = document.createElement('td');
+    var tdCross = document.createElement('td');
+    tdName.innerHTML = obj['name'];
+    tdSurname.innerHTML = obj['surname'];
+    tdAge.innerHTML = obj['age'];
+    tdCross.innerHTML = '<i class="fas fa-times"></i>';
+    tdCross.dataset.index = students.indexOf(obj);
+    tr.appendChild(tdName);
+    tr.appendChild(tdSurname);
+    tr.appendChild(tdAge);
+    tr.appendChild(tdCross);
+    table.appendChild(tr);
+
+    tdCross.addEventListener('click', function () {
+        this.parentElement.remove();
+        students.splice(this.dataset.index, 1);
+    });
 }
 
 function resetForm() {
@@ -53,10 +74,8 @@ function es3() {
 
         students.push(student);
 
-        
         printTr(student);
         resetForm();
-        
     });
 }
 
