@@ -3,28 +3,44 @@
   padding: 0;
 }
 
-
-.container{
-  height: 100vh;
-  display: flex;
+body{
   background-color: lightblue;
 }
 
-.row{
+.container{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+#form{
+  border: 3px solid #000;
+  border-radius: 5px;
+}
+
+form{
+  padding: 20px;
+}
+
+form *{
+  display: block;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"]{
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#submit{
   margin: auto;
-  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-#red{
-  height: 200px;
-  width: 100px;
-  border: 1px solid red;
-  color: red;
-}
+#content-table{
+  width: 400px;
+  height: 500px;
+  background-color: red;
 
-#green{
-  height: 200px;
-  width: 100px;
-  border: 1px solid green;
-  color: green;
 }

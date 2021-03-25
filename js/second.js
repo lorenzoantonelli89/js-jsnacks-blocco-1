@@ -91,10 +91,10 @@ function es3Var() {
 
 
 function init() {
-    es1();
-    es2();
-    es3();
-    es3Var();
+    // es1();
+    // es2();
+    // es3();
+    // es3Var();
 
 }
 
