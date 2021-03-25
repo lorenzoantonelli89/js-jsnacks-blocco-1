@@ -134,30 +134,30 @@
 // hanno la posizione compresa tra "a" e "b"
 
 
-    function splitter(min, max, array) {
+    // function splitter(min, max, array) {
 
-    var resultArr = [];
+    // var resultArr = [];
 
-    for(var i = min; i <= max; i++){
+    // for(var i = min; i <= max; i++){
 
-        resultArr.push(array[i]);
+    //     resultArr.push(array[i]);
 
-    }
+    // }
 
-    return console.log(resultArr);
-    }
+    // return console.log(resultArr);
+    // }
 
 
-    function esArraySplitter() {
+    // function esArraySplitter() {
 
-    var arr = [1, 2, 3, 10, 12, 13, 7, 8, 9];
-    var indMin = 3;
-    var indMax = 7;
+    // var arr = [1, 2, 3, 10, 12, 13, 7, 8, 9];
+    // var indMin = 3;
+    // var indMax = 7;
 
-    var splitted = splitter(indMin, indMax, arr);
+    // var splitted = splitter(indMin, indMax, arr);
 
-    console.log(arr);
+    // console.log(arr);
 
-    }
+    // }
 
-    esArraySplitter();
+    // esArraySplitter();

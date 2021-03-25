@@ -1,3 +1,5 @@
+var tableWrapper = document.getElementById('content-table');
+var table;
 var students = [];
 
 function es1() {
@@ -5,19 +7,30 @@ function es1() {
     var student = {
         'name': 'Lorenzo',
         'surname': 'Antonelli',
-        'eta': 32
+        'age': 32
     }
 
     students.push(student);
-    // console.log(students[0]['name']);
 
-//     console.log('ESERCIZIO 1');
-//     console.log(' ');
+    tableWrapper.innerHTML = ("<table id='table'><tr><th>Nome</th><th>Cognome</th><th>Età</th><th></th></tr></table> ");
 
-//     for (var key in student)
+    table = document.getElementById('table');
 
-//         console.log(student[key]);
+    for(var i = 0; i < students.length; i++){
 
+        table.innerHTML += ('<tr><td>' + students[i]['name'] + '</td><td>' + students[i]['surname'] + '</td><td>' + students[i]['age'] + '</td><td><i class="fas fa-times"></i></td></tr>');
+    }
+}
+
+function printTr(obj) {
+    table.innerHTML += ('<tr><td>' + obj['name'] + '</td><td>' + obj['surname'] + '</td><td>' + obj['age'] + '</td><td><i class="fas fa-times"></i></td></tr>');
+}
+
+function resetForm() {
+    
+    document.getElementById('fname').value = '';
+    document.getElementById('lname').value = '';
+    document.getElementById('age').value = '';
 }
 
 function es3() {
@@ -26,40 +39,31 @@ function es3() {
 
     btn.addEventListener('click', function (event) {
 
-        var fnameValue = document.getElementById('fname').value;
-        var lnameValue = document.getElementById('lname').value;
-        var etaValue = document.getElementById('eta').value;
+        var name = document.getElementById('fname').value;
+        var surname = document.getElementById('lname').value;
+        var age = parseInt(document.getElementById('age').value);
         
         event.preventDefault();
 
+        var student = {
+            name,
+            surname,
+            age 
+        }
+
+        students.push(student);
 
         
-        console.log(fnameValue);
-        console.log(lnameValue);
-        console.log(etaValue);
+        printTr(student);
+        resetForm();
+        
     });
-
-    
-
-    // console.log(' ');
-    // console.log('ESERCIZIO 3');
-
-    // for (var i = 0; i < students.length; i++) {
-
-    //     console.log(' ');
-    //     console.log('Name: ' + students[i]['name']);
-    //     console.log('Surname: ' + students[i]['surname']);
-    //     console.log('Età: ' + students[i]['eta']);
-
-    // }
-
-
 }
 
 
 function init() {
-    // es1();
-    // es3();
+    es1();
+    es3();
 }
 
 init();

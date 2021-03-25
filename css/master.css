@@ -38,9 +38,24 @@ input[type="text"], input[type="number"]{
   border-radius: 10px;
 }
 
+/* regole table */
 #content-table{
-  width: 400px;
-  height: 500px;
-  background-color: red;
-
+  flex-basis: 60%;
 }
+
+#table{
+  width: 80%; 
+  border: 3px solid #000;
+  border-radius: 5px;
+}
+
+th, td{
+  border-style: groove;
+  padding: 10px;
+  text-align: center;
+}
+
+.fas.fa-times{
+  cursor: pointer;
+}
+
