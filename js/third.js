@@ -1,6 +1,7 @@
 var tableWrapper = document.getElementById('content-table');
 var table;
 var students = [];
+var student;
 
 function es1() {
 
@@ -66,7 +67,7 @@ function es3() {
         
         event.preventDefault();
 
-        var student = {
+        student = {
             name,
             surname,
             age 
@@ -79,10 +80,30 @@ function es3() {
     });
 }
 
+function order() {
+    var btnOrder = document.getElementById('btnorder');
+
+    btnOrder.addEventListener('click', function () {
+
+        students.sort(function(a, b){
+            var textA = a.surname.toUpperCase();
+            var textB = b.surname.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            
+        });
+
+        console.log(students);
+
+        // printTr(student);
+        
+    });
+}
+
 
 function init() {
     es1();
     es3();
+    order();
 }
 
 init();
