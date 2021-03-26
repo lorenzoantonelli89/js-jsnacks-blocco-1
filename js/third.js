@@ -90,56 +90,38 @@ function printOrder() {
     }
 }
 
+function itemsOrder(str) {
+    students.sort(function (a, b){
+        var A = a[str];
+        var B = b[str];
+        if (A < B) {
+            return -1;
+        } else if (A > B) {
+            return 1;
+        }
+        return 0;
+    });
+    printOrder();
+}
+
 function order() {
     
     var nameOrder = document.getElementById('nameorder');
 
     nameOrder.addEventListener('click', function () {
-        students.sort(function (a, b) {
-            var textA = a.name.toUpperCase();
-            var textB = b.name.toUpperCase();
-            if (textA < textB) {
-                return -1;
-            }
-            if (textA > textB) {
-                return 1;
-            }
-        });
-        printOrder();
+        itemsOrder('name');
     });
 
     var surnameOrder = document.getElementById('surnameorder');
 
     surnameOrder.addEventListener('click', function () {
-
-        students.sort(function (a, b) {
-            var textA = a.surname.toUpperCase();
-            var textB = b.surname.toUpperCase();
-            if (textA < textB) {
-                return -1;
-            }
-            if (textA > textB) {
-                return 1;
-            }
-        });
-        printOrder();
+        itemsOrder('surname');
     });
 
     var ageOrder = document.getElementById('ageorder');
 
     ageOrder.addEventListener('click', function () {
-        
-        students.sort(function (a, b) {
-            var numA = a.age;
-            var numB = b.age;
-            if (numA < numB){
-                return -1;
-            }else if (numA > numB) {
-                return 1;
-            }
-            return 0;
-        });
-        printOrder();
+        itemsOrder('age');
     });
 }
 
