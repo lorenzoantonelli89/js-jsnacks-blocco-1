@@ -52,6 +52,8 @@ function resetForm() {
     document.getElementById('lname').value = '';
     document.getElementById('age').value = '';
 }
+
+
 // funzione click del submit
 function clickSubmit() {
 
@@ -73,8 +75,22 @@ function clickSubmit() {
             surname,
             age 
         }
-        students.push(student);
-        printTr(student);
+
+        let control = false;
+        // ciclo per controllare nomi doppi
+        for(let i = 0; i < students.length; i++){
+            if (students[i]['name'] == name && students[i]['surname'] == surname && students[i]['age'] == age) {
+                control = true;
+                break;
+            }
+        }
+
+        if (control == true) {
+            alert('Hai inserito uno studente già presente')
+        }else{
+            students.push(student);
+            printTr(student);
+        }
         resetForm();
         nameReturn.focus(); // funzione per far ritornare a inserimento name dopo invio dati
     });
